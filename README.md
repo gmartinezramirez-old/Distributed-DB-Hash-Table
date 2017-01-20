@@ -1,9 +1,8 @@
-# README Laboratorio 3 SD #
+# README #
 
 ### Objetivo ###
 
-* Diseñar e implementar un sistema de bases de datos distribuidas dada
-una función hash.
+* Diseñar e implementar un sistema de bases de datos distribuidas dada una función hash.
 
 ### Explicación ###
 
@@ -11,13 +10,9 @@ una función hash.
 
 * Existirá un *broker* que estará encargado de aplicar una función *hash* a lo que se desee en la tupla o/y tabla que se vaya a insertar.
 
-![lab3_1.png](https://bitbucket.org/repo/58aepM/images/826922278-lab3_1.png)
-
 * Al momento que se desea insertar se aplicará esta función *hash*, para saber a cual de las BD disponibles debe insertar.
 
 * Ejemplo: Puede aplicarse una función *hash* SHA-1 y luego aplicarle el módulo de la cantidad de servidores disponibles, de esta manera dará un número entre [0,n-1], donde *n* es la cantidad de servidores disponibles, como se muestra en el siguiente algoritmo.
-
-![lab3_2.png](https://bitbucket.org/repo/58aepM/images/3076785280-lab3_2.png)
 
 * En el momento de la búsqueda, el *broker* deberá consultar la misma consulta a cada una de las BD.
 
