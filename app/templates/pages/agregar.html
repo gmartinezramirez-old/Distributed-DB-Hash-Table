@@ -1,0 +1,79 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Agregar mascota - Hotel de mascotas{% endblock %}
+
+{% block content %}
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">   
+                    <h1>Agregar mascota</h1>
+                        
+                    <p>Acá usted puede hacer agregar una mascota con todos sus datos</p>
+                    
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h1 style="text-align: center">Agregar mascota</h1>
+                                    </div>
+                                <div class="panel-body">
+                                    <form role="form">
+                                        <div class="form-horizontal" class="form-group" style="width:50%">
+                                            <label for="nombrePropietario">Nombre del Propietario</label>
+                                            <input class="form-control input-md" type="name" class="form-control" placeholder="Carolina" name="nombrePropietario">
+                                        </div><br />
+                                        <div class="form-horizontal" class="form-group" style="width:50%">
+                                            <label for="rutPropietario">Rut del Propietario</label>
+                                            <input class="form-control input-md" type="text" class="form-control" placeholder="12345678-9" name="rutPropietario">
+                                        </div><br />
+                                        <div class="form-horizontal" class="form-group" style="width:50%">
+                                            <label for="nombreMascota">Nombre de la mascota</label>
+                                            <input class="form-control input-md" type="name" class="form-control" placeholder="Betoberto" name="nombreMascota">
+                                        </div><br />
+                                        <div class="form-horizontal" class="form-group" style="width:50%">
+                                            <label for="edadMascota">Edad de la mascota</label>
+                                            <input class="form-control input-md" type="number" class="form-control" placeholder="5" name="edadMascota">
+                                        </div><br />
+                                        <div class="form-horizontal" class="form-group" style="width:50%">
+                                            <label for="tipoMascota">Tipo de mascota</label>
+                                            <input class="form-control input-md" type="text" class="form-control" placeholder="Perro, gato, tortuga, etc" name="tipoMascota">
+                                        </div><br />
+                                        <div>
+                                            <button type="button" id="botonAgregarMascota" input type "submit" class="btn btn-success" id="submitForm">Agregar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                </div>
+                            </div>
+                    <div class="col-md-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>1
+    </div>
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+$(function() {
+    $('#botonAgregarMascota').click(function() {
+ 
+        $.ajax({
+            url: '/agregarmascota',
+            data: $('form').serialize(),
+            type: 'POST',
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});
+</script>
+
+{% endblock %}

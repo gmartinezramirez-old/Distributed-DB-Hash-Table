@@ -1,0 +1,34 @@
+{% extends 'layouts/base_sin_sidebar.html' %}
+
+{% block title %}Todas las mascotas - Hotel de mascotas{% endblock %}
+
+{% block content %}
+
+<h3>Lista de mascotas</h3>
+
+    <table>
+        <tr>
+            <th>Nombre mascota</th>
+            <th>Nombre Propietario</th>
+            <th>Rut Propietario</th>
+            <th>Fecha ingreso</th>
+            <th>Fecha retiro</th>
+            <th>Edad</th>
+            <th>Tipo</th>
+        </tr>
+           
+        {% for mascota in mascotas %}
+        <tr>
+            <td>{{ mascota.mascota_nombre }} </td>
+            <td>{{ mascota.mascota_nombrePropietario }}</td>
+            <td>{{ mascota.mascota_rutPropietario }}</td>
+            <td>{{ mascota.mascota_fechaIngreso }}</td>
+            <td>{{ mascota.mascota_fechaRetiro }}</td>
+            <td>{{ mascota.mascota_edad }}</td>
+            <td>{{ mascota.mascota_tipo }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+{% endblock %}

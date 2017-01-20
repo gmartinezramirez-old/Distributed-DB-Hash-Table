@@ -1,0 +1,40 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Consultar - Hotel de mascotas{% endblock %}
+
+{% block content %}
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">   
+                
+                    <h1>Mostrar todo lo almacenado por las BD</h1> <br>
+
+                    <a href="/listarmascotas">Mostrar todo lo almacenado por todas las bases de datos</a> <br>
+
+                    <h1>Mostrar todo distribuido por DB</h1> <br>
+    
+                    <a href="/listarmascotasDB1">Mostrar todas las mascotas que estan en DB1</a> <br>
+                    <a href="/listarmascotasDB2">Mostrar todas las mascotas que estan en DB2</a> <br>
+                    <a href="/listarmascotasDB3">Mostrar todas las mascotas que estan en DB3</a> <br>
+
+                    <h1>Mostrar todas las mascotas según información de la mascota</h1> <br>
+                    
+                    <a href="/consultarNombreMascotaForm">Consultar a las BD disponibles las mascotas según sea su nombre</a> <br>
+        
+                    <h1>Mostrar todas las mascotas según información del dueño</h1> <br>
+                    
+                    <a href="/consultarNombreDuenoForm">Consultar a las BD disponibles las mascotas según sea el nombre del dueño</a> <br>
+                    <a href="/consultarRutDuenoForm">Consultar a las BD disponibles las mascotas según sea el rut del dueño</a> <br>
+                    
+                    <h1>Mostrar todas las mascotas según tipo</h1> <br>
+
+                    <a href="/consultarTipoForm">Consultar a las BD disponibles el tipo de mascota ingresado</a> <br>
+                    <a href="/consultarTipoPerro">Mostrar todas las mascotas que sean tipo perro</a> <br>
+                    <a href="/consultarTipoGato">Mostrar todas las mascotas que sean tipo gato</a> <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
