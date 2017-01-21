@@ -1,10 +1,6 @@
 # README #
 
-### Objetivo ###
-
-* Diseñar e implementar un sistema de bases de datos distribuidas dada una función hash.
-
-### Explicación ###
+### Summary ###
 
 * Realizar un sistema que distribuya la inserción de datos de una BD, y que pueda también realizarse una búsqueda a donde sea necesario.
 
@@ -18,27 +14,21 @@
 
 * Luego, se realizará un *join* de todas las respuestas entregadas de las distintas BD, y será mostrar por la interfaz implementada.
 
-### Puntajes ###
-
-* Establecer conexión entre las BD y el broker. (2 ptos)
-* Insertar una tupla según la función *hash*. (2 ptos)
-* Realizar consultas simples a la BD. (2 ptos)
-
-### Requerimientos ###
+### Requeriments ###
 
 * Python 2.7.6
 * MongoDB 3.0.2
 * Mínimo 3 BD disponibles para la inserción de datos, todas debe ser con el mismo motor de BD.
 * Conector de Python con MongoDB: SQLALCHEMY
 
-### Instalación de paquetes necesarios ###
+### Installing ###
 
 * Para instalar lo necesario:
 
 * Flask
 * pip install -r requirements.txt
 
-### Ejecución ###
+### Execution ###
 
 * Situarse en la carpeta principal del proyecto
 * Escribir en la terminal: python run.py
